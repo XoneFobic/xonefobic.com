@@ -1,0 +1,27 @@
+@import '~src/styles/variables';
+@import '~src/styles/typography';
+
+html {
+  display    : flex;
+  width      : 100vw;
+  height     : 100vh;
+  margin     : 0;
+  padding    : 0;
+  background : #293133;
+}
+
+body {
+  font-family : 'Work Sans', sans-serif;
+  font-size   : 1.4vh;
+  display     : flex;
+  flex        : 1 0 auto;
+  margin      : ($standard-height-unit * 5) ($standard-width-unit * 5);
+  padding     : 0;
+  color       : #293133;
+  background  : #293133;
+}
+
+a {
+  text-decoration : none;
+  color           : #293133;
+}
