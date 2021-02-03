@@ -1,0 +1,103 @@
+:host {
+  display        : flex;
+  align-items    : center;
+  flex           : 1 0 auto;
+  flex-direction : column;
+  max-width      : calc(100vw - (75px + 25px));
+  min-height     : 0;
+}
+
+article {
+  flex          : 1 0 auto;
+  width         : 80%;
+  margin        : 5px;
+  padding       : 30px 10px;
+  border-bottom : 1px solid rgba(#293133, 0.5);
+
+  &:last-child {
+    border: none;
+  }
+}
+
+h1.title {
+  margin  : 0;
+  padding : 0;
+}
+
+.subtitle {
+  font-size    : 16px;
+  font-variant : all-small-caps;
+  line-height  : 16px;
+  margin-top   : 5px;
+
+  .year, .location, .position {
+    margin-right  : 5px;
+    padding-right : 5px;
+    border-right  : 1px solid rgba(#293133, 0.5);
+
+    &:last-child {
+      border : none;
+    }
+  }
+}
+
+.content {
+  display : flex;
+
+  .company-logo {
+    $logoSize    : 150px;
+    display      : flex;
+    align-self   : flex-start;
+    flex         : 1 0 auto;
+    width        : $logoSize;
+    min-width    : $logoSize;
+    max-width    : $logoSize;
+    min-height   : $logoSize;
+    justify-self : center;
+
+    &.nationalehypotheekbond {
+      background      : url('/assets/companyLogos/nationalehypotheekbond.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.mybit {
+      background      : url('/assets/companyLogos/mybit.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.openforest {
+      background      : url('/assets/companyLogos/openforest.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.heynensystems {
+      background      : url('/assets/companyLogos/heynensystems.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.postdanmark {
+      background      : url('/assets/companyLogos/postdanmark.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.transmission {
+      background      : url('/assets/companyLogos/transmission.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.guntersenmeuser {
+      background      : url('/assets/companyLogos/guntersenmeuser.webp') center no-repeat;
+      background-size : contain;
+    }
+
+    &.tpgpost {
+      background      : url('/assets/companyLogos/tpg-post.webp') center no-repeat;
+      background-size : contain;
+    }
+  }
+
+  .description {
+    font-size : 16px;
+    padding   : 10px;
+  }
+}

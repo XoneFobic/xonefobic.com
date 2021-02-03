@@ -1,48 +1,82 @@
-@import '~src/styles/variables';
-
 :host {
-  display : flex;
-  flex    : 1 0 auto;
+  position : absolute;
+  top      : 5px;
+  right    : 5px;
+  bottom   : 5px;
+  left     : 5px;
+  display  : flex;
 }
 
-#sidebar {
-  width        : $standard-width-unit * 70;
-  border-right : #293133 ($standard-width-unit * 5) solid;
-  background   : #cf0;
-}
-
-#content {
+aside {
+  position        : fixed;
+  top             : 5px;
+  bottom          : 5px;
+  left            : 5px;
   display         : flex;
   align-items     : center;
-  flex            : 1 0 auto;
   flex-direction  : column;
   justify-content : center;
-  padding         : ($standard-height-unit * 10) ($standard-width-unit * 10);
-  background      : #01cfff;
+  width           : 70px;
+  min-width       : 70px;
+  max-width       : 70px;
+  background      : #cf0;
 }
 
-#logo {
-  width           : $standard-width-unit * 500;
-  height          : $standard-height-unit * 300;
-  margin          : ($standard-height-unit * 10) ($standard-width-unit * 10);
-  background      : url('/assets/logo/full.webp') center no-repeat;
-  background-size : contain;
+main {
+  display     : flex;
+  overflow-y  : auto;
+  flex        : 1 1 auto;
+  max-width   : calc(100vw - 75px - 10px);
+  margin-left : 75px;
+  padding     : 0;
+  background  : #0cf;
 }
 
-#title {
-  font-size : 2vh;
+#ribbon-under_construction {
+  position       : absolute;
+  top            : -10px;
+  right          : -10px;
+  overflow       : hidden;
+  width          : 150px;
+  height         : 150px;
+  cursor         : default;
+  user-select    : none;
+  pointer-events : none;
 
-  h1 {
-    font-size : 5vh;
-    margin    : 0;
-    padding   : 0;
+  &::before, &::after {
+    position           : absolute;
+    z-index            : -1;
+    display            : block;
+    content            : '';
+    border             : 5px solid #9dc300;
+    border-top-color   : transparent;
+    border-right-color : transparent;
   }
-}
 
-#social {
-  display : flex;
+  &::before {
+    top  : 0;
+    left : 0;
+  }
 
-  & > a {
-    margin : ($standard-height-unit * 2) ($standard-width-unit * 2);
+  &::after {
+    right  : 0;
+    bottom : 0;
+  }
+
+  span {
+    font-size        : 16px;
+    font-variant     : all-small-caps;
+    position         : absolute;
+    top              : 30px;
+    left             : -25px;
+    display          : block;
+    width            : 225px;
+    padding          : 15px 0 15px 5px;
+    transform        : rotate(45deg);
+    text-align       : center;
+    color            : #293133;
+    background-color : #cf0;
+    box-shadow       : 0 5px 10px rgba(0, 0, 0, .1);
+    text-shadow      : 0 1px 1px rgba(0, 0, 0, .2);
   }
 }

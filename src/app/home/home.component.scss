@@ -1,0 +1,35 @@
+@import '~src/styles/variables';
+
+:host {
+  display         : flex;
+  align-items     : center;
+  flex            : 1 0 auto;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+#logo {
+  width           : $standard-width-unit * 500;
+  height          : $standard-height-unit * 300;
+  margin          : ($standard-height-unit * 10) ($standard-width-unit * 10);
+  background      : url('/assets/logo/full.webp') center no-repeat;
+  background-size : contain;
+}
+
+#title {
+  font-size : 2vh;
+
+  h1 {
+    font-size : 5vh;
+    margin    : 0;
+    padding   : 0;
+  }
+}
+
+#social {
+  display : flex;
+
+  & > a {
+    margin : ($standard-height-unit * 2) ($standard-width-unit * 2);
+  }
+}
