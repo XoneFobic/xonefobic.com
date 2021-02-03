@@ -15,7 +15,7 @@ article {
   border-bottom : 1px solid rgba(#293133, 0.5);
 
   &:last-child {
-    border: none;
+    border : none;
   }
 }
 
@@ -42,7 +42,7 @@ h1.title {
 }
 
 .content {
-  display : flex;
+  display            : flex;
 
   .company-logo {
     $logoSize    : 150px;
@@ -99,5 +99,18 @@ h1.title {
   .description {
     font-size : 16px;
     padding   : 10px;
+  }
+
+  $breakpoint-tablet : 768px;
+  @media (max-width : $breakpoint-tablet) {
+    flex-direction : column;
+
+    .company-logo {
+      align-self : center;
+    }
+
+    .description {
+      font-size : 12px;
+    }
   }
 }

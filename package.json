@@ -10,7 +10,7 @@
     "lint"        : "ng lint",
     "prebuild:ssr": "ngcc",
     "prerender"   : "ng run xonefobic-com:prerender",
-    "serve:ssr"   : "node dist/xonefobic-com/server/main.js",
+    "serve:ssr"   : "node dist/server/main.js",
     "start"       : "ng serve",
     "test"        : "ng test"
   },
@@ -31,8 +31,6 @@
     "@nestjs/platform-express"         : "^7.0.0",
     "@nguniversal/common"              : "^11.1.0",
     "@nguniversal/express-engine"      : "^11.0.1",
-    "@ngx-translate/core"              : "^13.0.0",
-    "@ngx-translate/http-loader"       : "^6.0.0",
     "class-transformer"                : "^0.2.3",
     "class-validator"                  : "^0.9.1",
     "express"                          : "^4.15.2",

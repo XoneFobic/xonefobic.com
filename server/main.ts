@@ -1,12 +1,16 @@
+import { Logger }      from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './app.module';
 
 const bootstrap = async () => {
   const app = await NestFactory.create(AppModule);
-  app.setGlobalPrefix('api');
+  const port = process.env.PORT || 4000;
 
-  await app.listen(process.env.PORT || 4000);
+  app.setGlobalPrefix('api');
+  app.enableCors({ origin: '*' });
+
+  await app.listen(port, () => Logger.log(`http://localhost:${port}/api`));
 };
 
 // Webpack will replace 'require' with '__webpack_require__'
